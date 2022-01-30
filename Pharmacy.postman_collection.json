@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "63c2c224-ec0d-4d42-b273-6cf27e656a86",
+		"name": "Pharmacy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"bbb\" , \r\n    \"password\" : \"333\" , \r\n    \"email\":\"noran@gmail.com\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"register"
+							]
+						},
+						"description": "Add User"
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"noran@gmail.com\", \r\n    \"password\": \"333\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYyMjYyNWQxYmY2MzdiOTMzN2E1OTMiLCJpYXQiOjE2NDMyNzc0OTZ9.Qt0EEwWdjpiQeVuglz3vNdA9cyT4mwIYRSp7t3YXmPI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"bbb\" , \"email\":\"noran@gmail.com\"  ,\"password\":\"333\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYyMjYyNWQxYmY2MzdiOTMzN2E1OTMiLCJpYXQiOjE2NDMyNzc0OTZ9.Qt0EEwWdjpiQeVuglz3vNdA9cyT4mwIYRSp7t3YXmPI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"aaaa\" , \r\n    \"password\" : \"123\" , \r\n    \"email\":\"noran1@gmail.com\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/edit/61f22625d1bf637b9337a593",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"edit",
+								"61f22625d1bf637b9337a593"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYyM2M1OTljOWFhNWUwNzk4M2VkZGUiLCJpYXQiOjE2NDMyNjU0Nzd9.77uRhS4rC9k9fEDipb8TKFxrjstBJfmYXaaIxfwUWB0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/showMyProfile",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"showMyProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYyMjYyNWQxYmY2MzdiOTMzN2E1OTMiLCJpYXQiOjE2NDMyNzc0OTZ9.Qt0EEwWdjpiQeVuglz3vNdA9cyT4mwIYRSp7t3YXmPI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Flagel\",\r\n    \"type\":\"Surup\" ,  \r\n    \"price\":13 , \r\n    \"totalStock\":25 ,\r\n    \"dateExpire\" :\"1/12/2023\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/product/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYyMjYyNWQxYmY2MzdiOTMzN2E1OTMiLCJpYXQiOjE2NDMyNzc0OTZ9.Qt0EEwWdjpiQeVuglz3vNdA9cyT4mwIYRSp7t3YXmPI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Flagel\",\r\n    \"type\":\"Surup\" ,  \r\n    \"price\":50 , \r\n    \"totalStock\":30  \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pharmacy/Product/61f2b250de638e10d23e4aa2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pharmacy",
+								"Product",
+								"61f2b250de638e10d23e4aa2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYyMjYyNWQxYmY2MzdiOTMzN2E1OTMiLCJpYXQiOjE2NDMyNzc0OTZ9.Qt0EEwWdjpiQeVuglz3vNdA9cyT4mwIYRSp7t3YXmPI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pharmacy/Product/61f2b4c738ec8639a02ef35c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pharmacy",
+								"Product",
+								"61f2b4c738ec8639a02ef35c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show All Products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYyM2M1OTljOWFhNWUwNzk4M2VkZGUiLCJpYXQiOjE2NDMyNjU3MjF9.XXA-qLVakx0H6uc1KlzyN2l1K1dQwM5bmJDy7ml11AM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/pharmacy/showAllProducts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pharmacy",
+								"showAllProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Single Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/pharmacy/showSingleProduct/61f2b250de638e10d23e4aa2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pharmacy",
+								"showSingleProduct",
+								"61f2b250de638e10d23e4aa2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/Downloads/pharmacy_images/amigraine.png"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/proImage/61f2b250de638e10d23e4aa2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proImage",
+								"61f2b250de638e10d23e4aa2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
